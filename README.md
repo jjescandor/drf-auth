@@ -4,13 +4,20 @@
 #### Author: JJ Escandor
 
 #### Description
- - This is project introduces Django Rest Framework, Docker, Postgresql
+ - This is project introduces Django Rest Framework, Docker, Postgresql, JWT
 
-### Run the app
+### To get tokens
  - source .venv/bin/activate
  - docker compose up -d
  - go to http://0.0.0.0:8000/api/token/ in the browser
  - admin username: code01 password: ASDFzxcv!@34 
+
+
+### Test in Thunderclient
+1. Make a new Thunderclient request to: http://0.0.0.0:8000/api/v1/evcars
+1. Select Auth tab
+1. Select Bearer and in the field, input your token
+1. Click Send
 
 ### Features - Django
 - Add JWT Authentication to your API.
@@ -29,6 +36,6 @@
 
 
 ### Tests
-1. In order to run the test, go to settings.py, comment in the Database entry for sqlite3
-1. Comment out database entry for posgtresql
-1. run python3 manage.py test in the browser
+1. run docker compose run web python3 manage.py test
+
+
